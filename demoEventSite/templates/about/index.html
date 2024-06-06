@@ -7,15 +7,18 @@
     </header>
     <div>
         <img src="{{ hero_image }}"/>
-        <div class="[&>p]:my-10">
-            {{ body_content_1|safe }}
+        <div class="flex py-10 justify-between gap-5">
+            <div class="[&>p]:my-10">
+                {{ body_content_1|safe }}
+            </div>
+            <img class="max-w-sm" src={{ inset_image_1 }}/>
         </div>
-        <div class="flex justify-between gap-5">
-            <img src={{ inset_image_1 }}/>
-            <img src={{ inset_image_2 }}/>
+    </div>
+    <div class="flex pb-10 justify-between gap-5">
+        <img class="max-w-sm" src={{ inset_image_2 }}/>
+        <div class="[&>p]:my-10 ">
+            {{ body_content_2|safe }}
         </div>
-        <div class="[&>p]:my-10">
-            {{ body_content_1|safe }}
-        </div>
+    </div>
     </div>
 {% endblock %}

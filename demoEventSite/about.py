@@ -12,12 +12,16 @@ def index():
     with open("demoEventSite/templates/about/about_text_2.md", "r", encoding="utf-8") as f:
         text = f.read()
     body_content_2 = markdown.markdown(text)
+    hero_image = './static/images/grill-landscape.jpg'  # "https://placehold.co/1280x650"
+    inset_image_1 = './static/images/smoky-person-landscape.jpg'  # 'https://placehold.co/600x400'
+    inset_image_2 = './static/images/bbq-steak-landscape.jpg'  # 'https://placehold.co/600x400'
+
     template_variables = {
         "heading": "About the Backyard Picnic",
         "subheading": "Ten years and still going strong!",
-        "hero_image": "https://placehold.co/1280x650",
-        "inset_image_1": 'https://placehold.co/600x400',
-        "inset_image_2": 'https://placehold.co/600x400',
+        "hero_image": hero_image,
+        "inset_image_1": inset_image_1,
+        "inset_image_2": inset_image_2,
         "body_content_1": body_content_1,
         "body_content_2": body_content_2,
     }

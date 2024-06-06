@@ -1,3 +1,4 @@
+import markdown
 from flask import Blueprint, render_template
 
 bp = Blueprint('directions', __name__)
@@ -5,4 +6,18 @@ bp = Blueprint('directions', __name__)
 
 @bp.route('/directions')
 def index():
-    return render_template('directions/index.html')
+    title = "Directions"
+    address = "1234 Park Place, Birmingham, AL"
+    with open("demoEventSite/templates/directions/directions_text.md", "r", encoding="utf-8") as f:
+        text = f.read()
+    text_directions_src = markdown.markdown(text)
+    map = './static/images/sample-map.png'
+
+    template_vars = {
+        'title': title,
+        'address': address,
+        'directions': text_directions_src,
+        'map': map
+    }
+
+    return render_template('directions/index.html', **template_vars)

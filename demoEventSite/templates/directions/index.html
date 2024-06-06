@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="flex justify-evenly">
+        <section>
+            <header class="mb-5">
+                <h1 class="font-bold text-3xl text-left">{{ title }}</h1>
+            </header>
+            <address class="my-5 font-bold">{{ address }}</address>
+            <div class="[&_H3]:font-bold [&_H3]:text-xl [&_H3]:last:mt-5 [&_OL]:mb-5 [&_OL]:list-decimal [&_OL]:ml-4">
+                {{ directions|safe }}
+            </div>
+        </section>
+        <img class="max-w-md" src={{ map }}/>
+    </div>
+{% endblock %}

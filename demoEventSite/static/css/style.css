@@ -583,6 +583,16 @@ video {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -643,6 +653,10 @@ video {
   display: flex;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-auto {
   width: auto;
 }
@@ -656,12 +670,24 @@ video {
   max-width: fit-content;
 }
 
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
 .list-image-none {
   list-style-image: none;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-1 {
@@ -693,6 +719,19 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -734,4 +773,54 @@ video {
 .\[\&\>p\]\:my-10>p {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.\[\&_\*\]\:font-bold * {
+  font-weight: 700;
+}
+
+.\[\&_H3\]\:text-xl H3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&_H3\]\:font-bold H3 {
+  font-weight: 700;
+}
+
+.\[\&_H3\]\:last\:mt-5:last-child H3 {
+  margin-top: 1.25rem;
+}
+
+.\[\&_OL\]\:mb-5 OL {
+  margin-bottom: 1.25rem;
+}
+
+.\[\&_OL\]\:ml-5 OL {
+  margin-left: 1.25rem;
+}
+
+.\[\&_OL\]\:ml-4 OL {
+  margin-left: 1rem;
+}
+
+.\[\&_OL\]\:ml-3 OL {
+  margin-left: 0.75rem;
+}
+
+.\[\&_OL\]\:ml-3\.5 OL {
+  margin-left: 0.875rem;
+}
+
+.\[\&_OL\]\:list-decimal OL {
+  list-style-type: decimal;
+}
+
+.\[\&_h3\]\:text-xl h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&_h3\]\:font-bold h3 {
+  font-weight: 700;
 }
