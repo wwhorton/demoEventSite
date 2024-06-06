@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="font-sans">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}{% if title %}{{ " - " }}{% endif %}Backyard Picnic 2024</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-{% include './includes/header.html' %}
+<body class="mx-auto px-10 max-w-screen-xl">
+{% include 'includes/header.html' %}
 <main>{% block content %}{% endblock %}</main>
-{% include './includes/footer.html' %}
+{% include 'includes/footer.html' %}
 </body>
 </html>

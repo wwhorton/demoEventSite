@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(demoEventSite/static/fonts/Inter/Inter-VariableFont_slnt,wght.ttf) format('ttf');
+    }
+}

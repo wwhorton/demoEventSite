@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
-  <component name="PrettierConfiguration">
-    <option name="myConfigurationMode" value="MANUAL" />
-    <option name="myRunOnSave" value="true" />
-    <option name="myRunOnReformat" value="true" />
+  <component name="Black">
+    <option name="sdkName" value="Python 3.12 (demoEventSite)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (demoEventSite)" project-jdk-type="Python SDK" />
   <component name="TypeScriptCompiler">

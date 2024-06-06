@@ -1,7 +1,14 @@
-<header>
-    <nav>
-        <ul>
-            <li>Home</li>
-        </ul>
+<header class="border-b border-gray-200 mb-5 py-5">
+    <nav class="flex justify-between mb-2">
+        <div>
+            <a class="inline-block" href="{{ url_for('home.index') }}">Home</a>
+        </div>
+        <div>
+            <ul class="list-image-none">
+                <li class="inline-block ml-12"><a href="{{ url_for('directions.index') }}">Directions</a></li>
+                <li class="inline-block ml-12"><a href="{{ url_for('contact.index') }}">Contact Us</a></li>
+                <li class="inline-block ml-12"><a href="{{ url_for('about.index') }}">About</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
