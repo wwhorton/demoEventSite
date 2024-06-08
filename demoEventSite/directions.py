@@ -20,4 +20,4 @@ def index():
         'map': map
     }
 
-    return render_template('directions/index.html', **template_vars)
+    return render_template('/directions/index.html', **template_vars)

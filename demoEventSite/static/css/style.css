@@ -653,6 +653,10 @@ video {
   display: flex;
 }
 
+.max-h-\[500px\] {
+  max-height: 500px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -676,6 +680,10 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .list-image-none {

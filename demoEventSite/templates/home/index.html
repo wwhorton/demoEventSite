@@ -1,1 +1,29 @@
 {% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <img src="#"/>
+        <section>
+            <h1>{{ title }}</h1>
+            <p>{{ subtitle }}</p>
+            <a href="{{ url_for('directions.index') }}">{{ button_text }}</a>
+        </section>
+    </div>
+    <section>
+        <h2>{{ subheading }}</h2>
+        <p>Whether you're new to the party or a returning guest, come join us this year and celebrate the summer!</p>
+    </section>
+    <div>
+        {% for card in cards %}
+            <div>
+                <img src="card.img"/>
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div>
+        <p>{{ blurb }}</p>
+        <img src="{{ blurb_img }}"/>
+    </div>
+{% endblock %}
