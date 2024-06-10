@@ -1,15 +1,18 @@
+import os
+
 import markdown
 from flask import Blueprint, render_template, url_for
 
 bp = Blueprint('about', __name__)
+template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 
 
-@bp.route('/about')
+@bp.route('/about', methods=['GET', 'POST'])
 def index():
-    with open("demoEventSite/templates/about/about_text_1.md", "r", encoding="utf-8") as f:
+    with open(os.path.join(template_dir, "about\\about_text_1.md"), "r", encoding="utf-8") as f:
         text = f.read()
     body_content_1 = markdown.markdown(text)
-    with open("demoEventSite/templates/about/about_text_2.md", "r", encoding="utf-8") as f:
+    with open(os.path.join(template_dir, "about\\about_text_2.md"), "r", encoding="utf-8") as f:
         text = f.read()
     body_content_2 = markdown.markdown(text)
     hero_image = url_for('static', filename='/images/grill-landscape.jpg')  # "https://placehold.co/1280x650"

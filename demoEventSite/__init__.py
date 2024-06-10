@@ -7,7 +7,9 @@ from demoEventSite import home, about, contact, directions
 
 def create_app(test_config=None):
     # create and configure the app
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__, instance_relative_config=True, root_path=os.path.dirname(os.path.abspath(__file__)),
+                static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'),
+                static_url_path='/static')
     app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'demoEventSite.sqlite'),
